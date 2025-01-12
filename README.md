@@ -1,23 +1,25 @@
 # Twitter Bot
 
-Bu bot, Twitter'da mention'lara ve tweet yanıtlarına otomatik olarak cevap veren bir AI asistanıdır.
+This bot is an AI assistant that automatically responds to mentions and tweet replies on Twitter.
 
-## Özellikler
+## Features
 
-- Mention'lara otomatik yanıt verme
-- Tweet'lere gelen yorumlara otomatik yanıt verme
-- OpenAI GPT-3.5 ile akıllı yanıtlar oluşturma
-- Rate limiting ve günlük tweet limiti kontrolü
-- Detaylı loglama sistemi
+- Automatic responses to mentions
+- Automatic replies to comments on tweets
+- Intelligent responses powered by OpenAI GPT-3.5
+- Rate limiting and daily tweet limit control
+- Detailed logging system
 
-## Kurulum
+## Setup
 
-1. Gerekli paketleri yükleyin:
-```bash
-pip install -r requirements.txt
-```
+1. Install the required packages:
 
-2. `.env` dosyasını oluşturun ve aşağıdaki değişkenleri ekleyin:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Create a .env file and add the following variables:
+
 ```
 TWITTER_API_KEY=your_api_key
 TWITTER_API_SECRET=your_api_secret
@@ -27,42 +29,43 @@ TWITTER_BEARER_TOKEN=your_bearer_token
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-## Kullanım
+## Usage
 
-Programı başlatmak için:
+To start the program:
 ```bash
 python main.py
 ```
 
-İki mod arasında seçim yapabilirsiniz:
-1. Mention'lara otomatik yanıt verme
-2. Tweet'lere gelen yorumlara otomatik yanıt verme
+You can choose between two modes:
 
-## Proje Yapısı
+1. Automatic responses to mentions
+2. Automatic replies to comments on tweets
+
+## Project Structure
 
 ```
 .
 ├── config/
-│   └── config.py         # Konfigürasyon ayarları
+│   └── config.py         # Configuration settings
 ├── src/
-│   ├── twitter_client.py # Twitter API işlemleri
-│   ├── openai_client.py  # OpenAI API işlemleri
-│   └── tweet_handler.py  # Tweet işleme mantığı
+│   ├── twitter_client.py # Twitter API operations
+│   ├── openai_client.py  # OpenAI API operations
+│   └── tweet_handler.py  # Tweet processing logic
 ├── utils/
-│   ├── logger.py        # Loglama sistemi
-│   └── rate_limiter.py  # Rate limiting işlemleri
-├── logs/                # Log dosyaları
-├── .env                 # Ortam değişkenleri
-├── main.py             # Ana program
-└── requirements.txt    # Gerekli paketler
+│   ├── logger.py        # Logging system
+│   └── rate_limiter.py  # Rate limiting logic
+├── logs/                # Log files
+├── .env                 # Environment variables
+├── main.py             # Main program
+└── requirements.txt    # Required packages
 ```
 
-## Güvenlik
+## Security
 
-- API anahtarları `.env` dosyasında güvenli bir şekilde saklanır
-- Rate limiting ile API kullanımı kontrol edilir
-- Günlük tweet limiti ile aşırı kullanım engellenir
+- API keys are securely stored in the `.env` file.
+- API usage is controlled with rate limiting.
+- Daily tweet limits prevent excessive usage.
 
-## Lisans
+## License
 
-MIT 
+MIT
